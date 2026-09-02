@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search city..." autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <main>
+            <!-- Current Weather -->
+            <section id="currentWeather" class="weather-section">
+                <div class="current-weather-card">
+                    <div class="weather-header">
+                        <div>
+                            <h2 id="cityName">Loading...</h2>
+                            <p id="weatherDate"></p>
+                        </div>
+                        <div class="weather-icon-large">
+                            <img id="weatherIcon" src="" alt="Weather icon">
+                        </div>
+                    </div>
+
+                    <div class="temperature-section">
+                        <div class="temperature">
+                            <span id="temperature">--</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <div class="weather-description">
+                            <p id="description">--</p>
+                            <p id="feelsLike">Feels like --°C</p>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">💧</span>
+                            <div>
+                                <p class="detail-label">Humidity</p>
+                                <p id="humidity" class="detail-value">--%</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">💨</span>
+                            <div>
+                                <p class="detail-label">Wind Speed</p>
+                                <p id="windSpeed" class="detail-value">-- m/s</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">🔽</span>
+                            <div>
+                                <p class="detail-label">Pressure</p>
+                                <p id="pressure" class="detail-value">-- hPa</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">👁️</span>
+                            <div>
+                                <p class="detail-label">Visibility</p>
+                                <p id="visibility" class="detail-value">-- km</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section id="forecastSection" class="weather-section">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast" class="forecast-container"></div>
+            </section>
+
+            <!-- Favorite Cities -->
+            <section id="favoritesSection" class="weather-section">
+                <div class="favorites-header">
+                    <h3>⭐ Favorite Cities</h3>
+                    <button id="addFavoriteBtn" class="add-favorite-btn">+ Add Current City</button>
+                </div>
+                <div id="favorites" class="favorites-container"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
